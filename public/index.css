@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #0088a9;
+}
+
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #272727;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #1b1b1b;
+}
+
+body {
+    background-color: #181818;
+    --nav-load-time: 300ms;
+    --nav-link-load-time: 500ms;
+    overflow-x: hidden;
+}
+
+div {
+    display: block;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+#section-header {
+    position: relative;
+    width: 100vw;
+    height: 115.5vh;
+    border-bottom: 2px solid #edf0f1;
+}
+
+#section-header video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#section-header .navbar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 12%;
+    z-index: 20;
+    animation: fadeIn 6s;
+}
+
+#section-header .navbar .logo {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    margin-right: auto;
+    z-index: 20;
+}
+
+#section-header .navbar .nav-links {
+    list-style: none;
+}
+
+#section-header .navbar .nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+#section-header .navbar .nav-links li a {
+    transition: all 0.3s ease 0s;
+    z-index: 20;
+}
+
+#section-header .navbar .nav-links li a:hover {
+    color: #0088a9;
+}
+
+.section-header-background {
+    width: 100%;
+    height: 72vh;
+    position: relative;
+}
+
+.section-header-background .section-header-background-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.section-header-background .section-header-background-title {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-size: 74px;
+    color: #edf0f1;
+    animation: fadeIn 6s;
+}
+
+.section-header-background .section-header-background-description {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 30px;
+    color: #edf0f1;
+    animation: fadeIn 6s;
+}
+
+#section-header .goToMainSectionButton {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #0088a9;
+    font-size: 35px;
+    text-align: center;
+    background-color: #0088a9;
+    box-shadow: 0 0 20px #0088a9;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    outline: none;
+    position: relative;
+    top: 4%;
+    left: 48.5%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 6s, float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#section-header .goToMainSectionButton p {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section-header .goToMainSectionButton:hover {
+    background-color: #29abcc;
+}
+
+#section-header .goToMainSectionButton.active {
+    transform: translateY(-100%, -100%);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#section-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#section-main #section-main-title {
+    text-align: center;
+    padding: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    color: white;
+    text-shadow: 0 0 30px white;
+}
+
+#section-main #section-main-title #section-main-icon img {
+    width: 130px;
+    height: 130px;
+}
+
+#section-main #accounts-list {
+    margin: 30px 0 60px 0;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 60px;
+    align-items: center;
+}
+
+#section-main #accounts-list #account-card {
+    width: 370px;
+    height: 500px;
+    background-color: #1b1b1b;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #222222;
+    transition: all 0.3s ease 0s;
+}
+
+#section-main #accounts-list #account-card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+#section-main #accounts-list #account-card #account-card-image {
+    width: 368px;
+    height: 242px;
+}
+
+#section-main #accounts-list #account-card #account-card-image img {
+    width: 370px;
+    height: 242px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 2px solid black;
+}
+
+#section-main #accounts-list #account-card #account-card-content {
+    padding: 0 10px 8px 10px;
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-type {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-price {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    color: #0088a9;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-description {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0,5));
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-button {
+    padding: 25px;
+    text-align: center;
+    align-items: center;
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-button #card-button {
+    width: 250px;
+    height: 60px;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #0088a9;
+    box-shadow: 0 0 20px #0088a9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-button #card-button:hover {
+    background-color: #29abcc;
+}
+
+#section-main #accounts-list #account-card #account-card-content #account-card-modal {
+    display: none;
+}
+
+#accountImage {
+    display: none;
+    position: absolute;
+}
+
+#section-main #why-us-list {
+    margin: 30px 0 10px 0;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: 40px;
+    align-items: center;
+}
+
+#section-main #why-us-list #why-us-card {
+    width: 370px;
+    height: 300px;
+    background-color: #1b1b1b;
+    position: relative;
+    border-radius: 2px;
+    border-left: 3px solid #0088a9;
+    border-right: 3px solid #0088a9;
+    transition: all 0.3s ease 0s;
+}
+
+#section-main #why-us-list #why-us-card:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+
+#section-main #why-us-list #why-us-card #why-us-card-content {
+    padding: 0 10px 8px 10px;
+}
+
+#section-main #why-us-list #why-us-card #why-us-card-content #why-us-card-title {
+    padding: 10px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    color: #0088a9;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+#section-main #why-us-list #why-us-card #why-us-card-content #why-us-card-description {
+    padding: 35px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0,5));
+}
+
+#footer {
+    background-color: #1b1b1b;
+    margin-top: 50px;
+}
+
+#footer #footer-in {
+    display: flex;
+}
+
+#footer #footer-in #footer-left {
+    width: 1000px;
+    height: 118px;
+}
+
+#footer #footer-in #footer-left #footer-left-in {
+    text-align: center;
+    padding: 29.5px;
+}
+
+#footer #footer-in #footer-left #footer-left-in p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #edf0f1;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-left #footer-left-in #payment-images {
+    margin-top: 10px;
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-left #footer-left-in #payment-images img {
+    width: 50px;
+    height: 30px;
+}
+
+#footer #footer-in #footer-right {
+    width: 1000px;
+    height: 118px;
+}
+
+#footer #footer-in #footer-right #footer-right-top {
+    height: 59px;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links {
+    list-style: none;
+    text-align: center;
+    padding: 29.5px;
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li {
+    display: inline-block;
+    padding: 0px 10px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li a {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li a:hover {
+    color: #0088a9;
+}
+
+#support-link {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#support-link:hover {
+    color: #0088a9;
+}
+
+#footer #footer-in #footer-right #footer-right-bottom {
+    height: 59px;
+}
+
+#footer #footer-in #footer-right #footer-right-bottom #footer-right-bottom-text {
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    padding: 14.75px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #edf0f1;
+    text-decoration: none;
+    position: relative;
+    z-index: 20;
+}
+
+#notification-area {
+    position:fixed;
+    top:0px;
+    right:10px;
+    width:300px;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    z-index: 10;
+  }
+  #notification-area .notification {
+    height: 80px;
+    position:relative;
+    padding:15px 10px;
+    background:#111;
+    color:#f5f5f5;
+    font-family: "Montserrat", sans-serif;
+    font-size:15px;
+    font-weight:500;
+    border-radius:5px;
+    margin:855px 0px;
+    opacity:0;
+    left:20px;
+    animation:showNotification 500ms ease-in-out forwards;
+  }
+  @keyframes showNotification {
+    to {
+      opacity:1;
+      left:0px;
+    }
+  }
+  #notification-area .notification.error {
+    background:#e74c3c;
+    box-shadow: 0 0 10px #e74c3c;
+  }
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    transition: ease-in-out 200ms;
+    z-index: 10;
+}
+  
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+.modal-content {
+    width: 717px;
+    height: 482px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #1b1b1b;
+}
+
+.modal-header {
+    display: flex;
+}
+
+.modal .modal-content .modal-header .modal-title {
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 25px;
+    padding-bottom: 10px;
+    color: #0088a9;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal .modal-content .modal-info {
+    text-align: center;
+    padding-bottom: 10px;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal .modal-content .modal-info .modal-account-card-id {
+    opacity: 0;
+    position: absolute;
+}
+
+.modal .modal-content .modal-info .modal-account-card-stripe-image {
+    opacity: 0;
+    position: absolute;
+}
+
+.modal .modal-content .modal-description {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal .modal-content .email-input {
+    width: 70%;
+    height: 56.25px;
+    padding-left: 10px;
+    display: flex;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    outline: 0;
+    border: 1px solid #0088a9;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    box-shadow: 0 0 10px #0088a9;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+
+.modal .modal-content.error .email-input {
+    border-color: #e74c3c;
+    box-shadow: 0 0 10px #e74c3c;
+}
+
+.modal .modal-content i {
+    visibility: hidden;
+    position: absolute;
+    top: 41%;
+    right: 125px;
+}
+
+.modal .modal-content.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.modal .modal-content small {
+    font-family: "Montserrat", sans-serif;
+    visibility: hidden;
+    position: absolute;
+    left: 115px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal .modal-content.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.quantityLabel {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.quantityLabel .quantity-label-heading {
+    color: #0088a9;
+    font-size: 27px;
+    margin-bottom: 5px;
+    font-family: "Montserrat", sans-serif;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.quantityLabel .quantity-label-description {
+    color: #edf0f1;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+} 
+
+.accountsAmount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border: none;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.accountsAmount .decButton {
+    width: 50px;
+    background-color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.accountsAmount .incButton {
+    width: 50px;
+    background-color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease 0s;
+}
+
+.accountsNumber {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    outline: none;
+    border: none;
+}
+
+.modal .modal-content .buttonContinue {
+    width: 250px;
+    height: 60px;
+    padding: 10px 25px;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 30px;
+    background-color: #0088a9;
+    box-shadow: 0 0 20px #0088a9;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    outline: none;
+}
+
+.modal .modal-content .buttonContinue:hover {
+    background-color: #29abcc;
+}
+
+.modal .modal-content .buttonContinue:focus {
+    background-color: #0088a9;
+}
+
+.modal .modal-content .modal-header .close-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #edf0f1;
+    bottom: 15px;
+    left: 672px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+  
+#modal-overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+  
+#modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    transition: ease-in-out 200ms;
+    z-index: 10;
+}
+  
+.modal2.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+.modal2-content {
+    width: 450px;
+    height: 566px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #1b1b1b;
+}
+
+.modal2-content .modal2-header {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    border-bottom: 2px solid #0088a9;
+}
+
+.modal2-content .modal2-header .close2-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #edf0f1;
+    bottom: 5px;
+    left: 418px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal2-content .modal2-header .modal2-title {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #edf0f1;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal2-content .modal2-main {
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.modal2-content .modal2-main .modal2-main-content {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-text {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-text .modal2-main-content-text-main2 {
+    width: 100%;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-text .modal2-main-content-text-main2 p {
+    text-align: center;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    letter-spacing: 0.05em;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-text .modal2-main-content-text-main2 .discord-button {
+    width: 90%;
+    height: 50px;
+    background-color: #5865F2;
+    color: #edf0f1;
+    cursor: pointer;
+    border: none;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    font-size: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    left: 19px;
+    margin-top: 46px;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-text .modal2-main-content-text-main2 .discord-button:hover {
+    background-color: #6772e9;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-or {
+    width: 100%;
+    height: 10%;
+    position: relative;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-or .modal2-main-content-or-main {
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.modal2-content .modal2-main .modal2-main-content .modal2-main-content-or .modal2-main-content-or-main p {
+    text-align: center;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 27px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}

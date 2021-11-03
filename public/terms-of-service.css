@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background: #0088a9;
+}
+
+html::-webkit-scrollbar {
+    width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #272727;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #1b1b1b;
+}
+
+body {
+    background-color: #181818;
+    overflow-x: hidden;
+}
+
+li, a, button {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 10%;
+    background-color: #1b1b1b;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.navlinks {
+    list-style: none;
+}
+
+.navlinks li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navlinks li a {
+    transition: all 0.3s ease 0s;
+}
+
+.navlinks li a:hover {
+    color: #0088a9;
+}
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 30px;
+}
+
+.main-header .main-header-image {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    padding-bottom: 30px;
+}
+
+.main-header .main-header-image .checkmark-image {
+    width: 120px;
+    height: 120px;
+}
+
+.main-header .main-header-text {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    text-shadow: 0 0 30px white;
+}
+
+.main {
+    margin-top: 50px;
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.main .main-box {
+    width: 1100px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow-wrap: break-word;
+}
+
+.main .main-box .main-box-text {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #222222;
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#footer {
+    background-color: #1b1b1b;
+    margin-top: 50px;
+}
+
+#footer #footer-in {
+    display: flex;
+}
+
+#footer #footer-in #footer-left {
+    width: 1000px;
+    height: 118px;
+}
+
+#footer #footer-in #footer-left #footer-left-in {
+    text-align: center;
+    padding: 29.5px;
+}
+
+#footer #footer-in #footer-left #footer-left-in p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #edf0f1;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-left #footer-left-in #payment-images {
+    margin-top: 10px;
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-left #footer-left-in #payment-images img {
+    width: 50px;
+    height: 30px;
+}
+
+#footer #footer-in #footer-left #footer-left-in #payment-images #paypal-logo {
+    width: 30px;
+}
+
+#footer #footer-in #footer-right {
+    width: 1000px;
+    height: 118px;
+}
+
+#footer #footer-in #footer-right #footer-right-top {
+    height: 59px;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links {
+    list-style: none;
+    text-align: center;
+    padding: 29.5px;
+    position: relative;
+    z-index: 20;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li {
+    display: inline-block;
+    padding: 0px 10px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li a {
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+#footer #footer-in #footer-right #footer-right-top #footer-links li a:hover {
+    color: #0088a9;
+}
+
+#support-link {
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#support-link:hover {
+    color: #0088a9;
+}
+
+#footer #footer-in #footer-right #footer-right-bottom {
+    height: 59px;
+}
+
+#footer #footer-in #footer-right #footer-right-bottom #footer-right-bottom-text {
+    text-align: center;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    padding: 14.75px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: #edf0f1;
+    text-decoration: none;
+    position: relative;
+    z-index: 20;
+}
+
+#terms-of-service-link {
+    color: #0088a9;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 10px;
+    transition: ease-in-out 200ms;
+    z-index: 10;
+}
+  
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+.modal-content {
+    width: 450px;
+    height: 566px;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #1b1b1b;
+}
+
+.modal-content .modal-header {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    border-bottom: 2px solid #0088a9;
+}
+
+.modal-content .modal-header .close-button {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #edf0f1;
+    bottom: 5px;
+    left: 418px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal-content .modal-header .modal-title {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #edf0f1;
+    font-size: 40px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+.modal-content .modal-main {
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.modal-content .modal-main .modal-main-content {
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.modal-content .modal-main .modal-main-content .modal-main-content-text {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.modal-content .modal-main .modal-main-content .modal-main-content-text .modal-main-content-text-main2 {
+    width: 100%;
+    height: 96px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.modal-content .modal-main .modal-main-content .modal-main-content-text .modal-main-content-text-main2 p {
+    text-align: center;
+    color: #edf0f1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    letter-spacing: 0.05em;
+}
+
+.modal-content .modal-main .modal-main-content .modal-main-content-text .modal-main-content-text-main2 .discord-button {
+    width: 90%;
+    height: 50px;
+    background-color: #5865F2;
+    color: #edf0f1;
+    cursor: pointer;
+    border: none;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    font-size: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    left: 19px;
+    margin-top: 46px;
+}
+
+.modal-content .modal-main .modal-main-content .modal-main-content-text .modal-main-content-text-main2 .discord-button:hover {
+    background-color: #6772e9;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+  
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}

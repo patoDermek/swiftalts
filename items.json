@@ -1,0 +1,181 @@
+{
+    "minecraftAccount1": [
+        {
+            "id": 1,
+            "name": "Non Full Access",
+            "price": 2,
+            "description": "An Account that is great for hacking and botting. Password, Skin, etc... cannot be changed.",
+            "imgName": "non-full-access.png",
+            "modalDescription": "Account that is great for hacking, botting, etc... The account name, skin, password and email cannot be changed. Alts are temporary due to mojang frequently locking them. The account is usually banned from big servers like Hypixel, Mineplex, etc...",
+            "modalMinAccounts": 250,
+            "modalMinPrice": 5,
+            "stripeAccountImage": "https://i.ibb.co/9ZK0SBw/non-full-access.png",
+            "textFile": "accounts/non-full-access.txt"
+        }
+    ],
+
+    "minecraftAccount2": [
+        {
+            "id": 2,
+            "name": "Hypixel Unbanned MFA",
+            "price": 1200,
+            "description": "A permanent Full Access Minecraft Account. Good to use as your main Account.",
+            "imgName": "full-access.png",
+            "modalDescription": "Account that is great to use as your main account. All the account details can be changed. The account is guaranteed to be unbanned on Hypixel and other servers. You may also find some extras on the account such as MVP+, a high level, or UHC stars.",
+            "modalMinAccounts": 1,
+            "modalMinPrice": 12,
+            "stripeAccountImage": "https://i.ibb.co/nw22LB0/full-access.png",
+            "textFile": "accounts/email-full-access.txt"
+        }
+    ],
+
+    "minecraftAccount3": [
+        {
+            "id": 3,
+            "name": "Semi Full Access",
+            "price": 8,
+            "description": "An Account where you can change your Username & Skin. Great to use as a Temporary Account.",
+            "imgName": "semi-full-access.png",
+            "modalDescription": "Account that is great to use as a secondary account. The account name and skin can be changed. Alts are temporary due to mojang frequently locking them. The account is usually banned on big servers like Hypixel, Mineplex, etc...",
+            "modalMinAccounts": 60,
+            "modalMinPrice": 4.8,
+            "stripeAccountImage": "https://i.ibb.co/Y49qD7W/semi-full-access.png",
+            "textFile": "accounts/semi-full-access.txt"
+        }
+    ],
+
+    "minecraftAccount4": [
+        {
+            "id": 4,
+            "name": "Hypixel Ranked",
+            "price": 100,
+            "description": "A Hypixel Ranked Account NFA/SFA. Ranks are random & Account is Always Unban checked.",
+            "imgName": "hypixel-ranked.png",
+            "modalDescription": "Account that has a rank on Hypixel. The rank is anything from VIP to MVP+. The account may be NFA or SFA. Alts are temporary due to mojang frequently locking them.",
+            "modalMinAccounts": 5,
+            "modalMinPrice": 5,
+            "stripeAccountImage": "https://i.ibb.co/zm68CXC/hypixel-ranked.png",
+            "textFile": "accounts/hypixel-ranked.txt"
+        }
+    ],
+
+    "minecraftAccount5": [
+        {
+            "id": 5,
+            "name": "Hypixel Unbanned NFA",
+            "price": 10,
+            "description": "A Hypixel Unbanned NFA Account. Great for Hacking & Always Unban checked.",
+            "imgName": "hypixel-unbanned-nfa.png",
+            "modalDescription": "Account that is great for hacking, botting, etc... on Hypixel. The account name and skin cannot be changed. Alts are temporary due to mojang frequently locking them. The account is usually also unbanned on other servers.",
+            "modalMinAccounts": 50,
+            "modalMinPrice": 5,
+            "stripeAccountImage": "https://i.ibb.co/3TV1bKv/hypixel-unbanned-nfa.png",
+            "textFile": "accounts/hypixel-unbanned-nfa.txt"
+        }
+    ],
+
+    "minecraftAccount6": [
+        {
+            "id": 6,
+            "name": "Hypixel Unbanned SFA",
+            "price": 15,
+            "description": "A Hypixel Unbanned SFA Account. Great to use as a secondary Account & Always Unban checked.",
+            "imgName": "hypixel-unbanned-sfa.png",
+            "modalDescription": "Account that is great to use as a secondary account for Hypixel. The account name and skin can be changed. Alts are temporary due to mojang frequently locking them. The account is usually also unbanned on other servers.",
+            "modalMinAccounts": 30,
+            "modalMinPrice": 4.5,
+            "stripeAccountImage": "https://i.ibb.co/M93jCwq/hypixel-unbanned-sfa.png",
+            "textFile": "accounts/hypixel-unbanned-sfa.txt"
+        }
+    ],
+
+    "minecraftAccount7": [
+        {
+            "id": 7,
+            "name": "Hypixel Level 10+",
+            "price": 30,
+            "description": "A Hypixel Level 10+ Account. Great for Skyblock looting, UHC, etc... & Always Unban checked.",
+            "imgName": "hypixel-level-10+.png",
+            "modalDescription": "A Hypixel level 10+ account that is great for Skyblock looting, UHC, etc... The account may be NFA or SFA. Alts are temporary due to mojang frequently locking them.",
+            "modalMinAccounts": 15,
+            "modalMinPrice": 4.5,
+            "stripeAccountImage": "https://i.ibb.co/fHtBK1j/hypixel-level-10.png",
+            "textFile": "accounts/hypixel-level-10+.txt"
+        }
+    ],
+
+    "minecraftAccount8": [
+        {
+            "id": 8,
+            "name": "Hypixel Level 25+",
+            "price": 100,
+            "description": "A Hypixel Level 25+ Account. Great for Boosting, UHC, etc... & Always Unban checked.",
+            "imgName": "hypixel-level-25+.png",
+            "modalDescription": "A Hypixel level 25+ account that is great for Boosting, UHC, Ranked Skywars, etc... The account may be NFA or SFA. Alts are temporary due to mojang frequently locking them.",
+            "modalMinAccounts": 5,
+            "modalMinPrice": 5,
+            "stripeAccountImage": "https://i.ibb.co/K97t5G3/hypixel-level-25.png",
+            "textFile": "accounts/hypixel-level-25+.txt"
+        }
+    ],
+
+    "minecraftAccount9": [
+        {
+            "id": 9,
+            "name": "Minecraft Optifine Cape",
+            "price": 400,
+            "description": "A Minecraft Account with an Optifine Cape. You can transfer the cape with Optifine to your Main Account.",
+            "imgName": "optifine-cape.png",
+            "modalDescription": "A Minecraft account with an Optifine cape. You can transfer the Optifine cape to your main account. The account is usually banned on big servers like Hypixel, Mineplex, etc...",
+            "modalMinAccounts": 1,
+            "modalMinPrice": 4,
+            "stripeAccountImage": "https://i.ibb.co/n37fnrS/optifine-cape.png",
+            "textFile": "accounts/optifine-cape.txt"
+        }
+    ],
+
+    "otherAccount1": [
+        {
+            "id": 10,
+            "name": "Netflix Premium",
+            "price": 300,
+            "description": "Watch the most Entertaining Shows & Movies with Netflix.",
+            "imgName": "netflix.png",
+            "modalDescription": "Watch the most entertaining shows & movies with Netflix. The quality access is random, you might get anything from Standard HD to Ultra HD. The login details cannot be changed and the account is not 100% private.",
+            "modalMinAccounts": 1,
+            "modalMinPrice": 3,
+            "stripeAccountImage": "https://i.ibb.co/5rvxjWQ/netflix.png",
+            "textFile": "accounts/netflix.txt"
+        }
+    ],
+
+    "otherAccount2": [
+        {
+            "id": 11,
+            "name": "Spotify Premium",
+            "price": 250,
+            "description": "Listen to your Favorite Music Without Interruption with Spotify.",
+            "imgName": "spotify.png",
+            "modalDescription": "Listen to your favorite music without interruption with Spotify. The plan is random, you might get anything from paid plan to family/student plans. The login details cannot be changed and the account is not 100% private.",
+            "modalMinAccounts": 1,
+            "modalMinPrice": 2.5,
+            "stripeAccountImage": "https://i.ibb.co/mNSMHCm/spotify.png",
+            "textFile": "accounts/spotify.txt"
+        }
+    ],
+
+    "otherAccount3": [
+        {
+            "id": 12,
+            "name": "VyprVPN",
+            "price": 400,
+            "description": "Bypass Hypixel IP Bans with The Best VPN Out There.",
+            "imgName": "vypr-vpn.png",
+            "modalDescription": "Bypass Hypixel IP bans with the best VPN out there. The account subscription might be anything up to one year of memberships. The login details cannot be changed.",
+            "modalMinAccounts": 1,
+            "modalMinPrice": 4,
+            "stripeAccountImage": "https://i.ibb.co/YkQK1fR/vypr-vpn.png",
+            "textFile": "accounts/vypr-vpn.txt"
+        }
+    ]
+}

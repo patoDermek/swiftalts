@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftAlts - Cheap High-Quality Minecraft Alts</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon-logo.png">
+    <base href="/">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="success.css">
+    <script src="success.js" defer></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="images/logo.png">
+        <nav>
+            <ul class="navlinks">
+                <li><a href="http://localhost:3000/">Store</a></li>
+                <li><a href="https://twitter.com/SwiftAltsNet" target="_blank">Twitter</a></li>
+                <li><a href="https://discord.gg/wSYTd9SUCq" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-header">
+        <div class="main-header-image">
+            <img class="checkmark-image" src="images/checkmark.png">
+        </div>
+
+        <div class="main-header-text">
+            <p>Order Successfully Created!</p>
+        </div>
+
+        <div class="main-header-button">
+            <button class="goToMainSectionButton" id="goToMainSectionButton"><p>↓</p></button>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <div class="main-inside">
+            <div class="order-details">
+                <div class="order-details-title">
+                    <p id="name"></p>
+                </div>
+
+                <div class="order-details-image">
+                    <img src="" id="order-details-image-main">
+                </div>
+
+                <div class="order-details-image-border-bottom"></div>
+
+                <div class="order-details-main">
+                    <div class="order-details-main-contents">
+                        <div class="order-details-main-contents-content">
+                            <p class="order-details-main-contents-content-main-text"><i class="fas fa-envelope"></i> Email Adress</p>
+                            <p id="email"></p>
+                        </div>
+
+                        <div class="order-details-main-contents-content">
+                            <p class="order-details-main-contents-content-main-text"><i class="fas fa-hashtag"></i> Order ID</p>
+                            <p id="order-id"></p>
+                        </div>
+
+                        <div class="order-details-main-contents-content">
+                            <p class="order-details-main-contents-content-main-text"><i class="fas fa-tags"></i> Price</p>
+                            <p id="price"></p>
+                        </div>
+
+                        <div class="order-details-main-contents-content">
+                            <p class="order-details-main-contents-content-main-text"><i class="fas fa-cubes"></i> Quantity</p>
+                            <p id="quantity"></p>
+                        </div>
+
+                        <div class="order-details-main-contents-content">
+                            <button class="support-button" id="support-button" data-modal-target="#modal"><i class="fas fa-headphones-alt"></i> Contact Support</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-accounts">
+                <div class="order-accounts-main">
+                    <textarea class="accounts" id="accounts" col="10" readonly></textarea>
+                    <div class="copy-button-main">
+                        <div>
+                            <button class="download-button" id="download-button"><i class="fas fa-download"></i> Download</button>
+                        </div>
+
+                        <div>
+                            <button class="copy-button" id="copy-button" onclick="notifyCopy()"><i class="fas fa-copy"></i> Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" data-aos="fade-up">
+
+        <div id="footer-in">
+            <div id="footer-left">
+
+                <div id="footer-left-in">
+                    <p>We Accept</p>
+                    <div id="payment-images">
+                        <img src="images/dark-visa.png">
+                        <img src="images/dark-mastercard.png">
+                        <img src="images/dark-american-express.png">
+                        <img src="images/dark-discover.png">
+                        <img src="images/dark-googlepay.png">
+                        <img src="images/dark-applepay.png">
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer-right">
+
+                <div id="footer-right-top">
+                    <ul id="footer-links">
+                        <li><a href="terms-of-service.html" id="terms-of-service-link">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" id="privacy-policy-link">Privacy Policy</a></li>
+                        <li id="support-link">Support</li>
+                    </ul>
+                </div>
+
+                <div id="footer-right-bottom">
+                    <div id="footer-right-bottom-text"><p>© SwiftAlts, all rights reserved</p></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="notification-area">
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-close-button class="close-button">&times;</button>
+                <div class="modal-title" id="modal-title">Support</div>
+            </div>
+            <div class="modal-main">
+                <div class="modal-main-content">
+                    <div class="modal-main-content-text">
+                        <div class="modal-main-content-text-main2">
+                            <p>To contact support, please join our discord by clicking this discord button, and open a ticket in the #create-a-ticket channel in the support category, and our support agents will be shortly with you.</p>
+                            <a href="https://discord.gg/wSYTd9SUCq" target="_blank"><button class="discord-button" id="discord-button"><i class="fab fa-discord"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+    </div>
+</body>
+</html>

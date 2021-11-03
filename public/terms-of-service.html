@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftAlts - Cheap High-Quality Minecraft Alts</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon-logo.png">
+    <link rel="stylesheet" href="terms-of-service.css">
+    <link rel="stylesheet" href="all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="images/logo.png">
+        <nav>
+            <ul class="navlinks">
+                <li><a href="http://localhost:3000/">Store</a></li>
+                <li><a href="https://twitter.com/SwiftAltsNet" target="_blank">Twitter</a></li>
+                <li><a href="https://discord.gg/wSYTd9SUCq" target="_blank">Discord</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-header">
+        <div class="main-header-image">
+            <img class="checkmark-image" src="images/logo.png">
+        </div>
+
+        <div class="main-header-text">
+            <p>Terms of Service</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-box">
+            <div class="main-box-text">
+                <p>
+                    <br>
+                    1. By purchasing one of our products, you automatically accept our terms of service.
+                    <br>
+                    <br>
+                    <br>
+                    2. We only provide refunds in cases when a product is deliverd non working. Open a ticket at our discord server and we will replace it.
+                    <br>
+                    <br>
+                    <br>
+                    3. You are not allowed to dropship our products. If you break this rule, we will permanently blacklist you.
+                    <br>
+                    <br>
+                    <br>
+                    4. You are not allowed to purchase one of our products using a vpn/proxy.
+                    <br>
+                    <br>
+                    <br>
+                    5. We have the right to deny a replacement/refund if the product was not working because of your own fault.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" data-aos="fade-up">
+
+        <div id="footer-in">
+            <div id="footer-left">
+
+                <div id="footer-left-in">
+                    <p>We Accept</p>
+                    <div id="payment-images">
+                        <img src="images/dark-visa.png">
+                        <img src="images/dark-mastercard.png">
+                        <img src="images/dark-american-express.png">
+                        <img src="images/dark-discover.png">
+                        <img src="images/dark-googlepay.png">
+                        <img src="images/dark-applepay.png">
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer-right">
+
+                <div id="footer-right-top">
+                    <ul id="footer-links">
+                        <li><a href="terms-of-service.html" id="terms-of-service-link">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" id="privacy-policy-link">Privacy Policy</a></li>
+                        <li id="support-link">Support</li>
+                    </ul>
+                </div>
+
+                <div id="footer-right-bottom">
+                    <div id="footer-right-bottom-text"><p>© SwiftAlts, all rights reserved</p></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button data-close-button class="close-button">&times;</button>
+                <div class="modal-title" id="modal-title">Support</div>
+            </div>
+            <div class="modal-main">
+                <div class="modal-main-content">
+                    <div class="modal-main-content-text">
+                        <div class="modal-main-content-text-main2">
+                            <p>To contact support, please join our discord by clicking this discord button, and open a ticket in the #create-a-ticket channel in the support category, and our support agents will be shortly with you.</p>
+                            <a href="https://discord.gg/wSYTd9SUCq" target="_blank"><button class="discord-button" id="discord-button"><i class="fab fa-discord"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay">
+    </div>
+
+    <script>
+        const closeModalButtons = document.querySelectorAll('[data-close-button]')
+        const overlay = document.getElementById('overlay')
+
+        document.getElementById('support-link').addEventListener('click', function() {
+            const modal = document.getElementById('modal')
+            openModal(modal)
+        })
+
+        overlay.addEventListener('click', () => {
+            const modals = document.querySelectorAll('.modal.active')
+            modals.forEach(modal => {
+                closeModal(modal)
+            })
+        })
+
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = button.closest('.modal')
+                closeModal(modal)
+            })
+        })
+
+        function openModal(modal) {
+            if (modal == null) return
+            modal.classList.add('active')
+            overlay.classList.add('active')
+        }
+
+        function closeModal(modal) {
+            if (modal == null) return
+            modal.classList.remove('active')
+            overlay.classList.remove('active')
+        }
+    </script>
+</body>
+</html>

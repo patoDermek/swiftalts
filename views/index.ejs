@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftAlts - Cheap High-Quality Minecraft Alts</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon-logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="index.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="section-header">
+        
+        <video autoplay loop muted>
+            <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+
+        <div class="navbar">
+            <img class="logo" src="images/logo.png">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="">Store</a></li>
+                    <li><a href="https://twitter.com/SwiftAltsNet" target="_blank">Twitter</a></li>
+                    <li><a href="https://discord.gg/wSYTd9SUCq" target="_blank">Discord</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="section-header-background">
+            <div class="section-header-background-main">
+                <div class="section-header-background-title">SwiftAlts</div>
+                <div class="section-header-background-description">Cheap High-Quality Minecraft Alt Shop</div>
+            </div>
+        </div>
+
+        <a href="#section-main">
+            <button class="goToMainSectionButton" id="goToMainSectionButton"><p>↓</p></button>
+        </a>
+    </div>
+
+    <div id="section-main">
+
+        <div id="section-main-title" data-aos="fade-up">
+            Minecraft
+            <span>Accounts</span>
+            
+            <div id="section-main-icon">
+                <img src="images/minecraft-logo-5EAD3A1535-seeklogo.com.png">
+            </div>
+        </div>
+
+        <div id="accounts-list" data-aos="fade-up">
+
+            <% items.minecraftAccount1.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img class="accountImage1" id="accountImage1" src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount2.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount3.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        
+        </div>
+
+        <div id="accounts-list" data-aos="fade-up">
+
+            <% items.minecraftAccount4.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount5.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount6.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        
+        </div>
+
+        <div id="accounts-list" data-aos="fade-up">
+
+            <% items.minecraftAccount7.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount8.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.minecraftAccount9.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        
+        </div>
+
+        <div id="section-main-title" data-aos="fade-up">
+            Other
+            <span>Accounts</span>
+        </div>
+
+        <div id="accounts-list" data-aos="fade-up">
+
+            <% items.otherAccount1.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.otherAccount2.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+            <% items.otherAccount3.forEach(function(item) { %> 
+                <div class="account-card" id="account-card" data-item-id="<%= item.id  %>">
+                    <div id="account-card-image">
+                        <img src="images/<%= item.imgName %>">
+                    </div>
+                    <div class="account-card-content" id="account-card-content">
+                        <div id="account-card-type">
+                            <p class="card-name" id="card-name"><%= item.name %> </p>
+                        </div>
+                        <div id="account-card-price">
+                            <p class="card-price" id="card-price">$<%= item.price / 100 %></p>
+                        </div>
+                        <div id="account-card-description">
+                            <p id="card-description">
+                                <%= item.description %>
+                            </p>
+                        </div>
+                        <div class="account-card-modal" id="account-card-modal">
+                            <div class="account-card-modal-description" id="account-card-modal-description"><%= item.modalDescription %></div>
+                            <div class="account-card-modal-min-accounts" id="account-card-modal-min-accounts"><%= item.modalMinAccounts %></div>
+                            <div class="account-card-modal-min-price" id="account-card-modal-min-price"><%= item.modalMinPrice %></div>
+                            <div class="account-card-stripe-image" id="account-card-stripe-image"><%= item.stripeAccountImage %></div>
+                            <div class="account-card-text-file" id="account-card-text-file"><%= item.textFile %> </div>
+                        </div>
+                        <div id="account-card-button">
+                            <button class="card-button" data-modal-target="#modal" id="card-button">Purchase</button>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+
+        </div>
+
+        <% items.otherAccount3.forEach(function(item) { %> <% }) %>
+
+        <div id="section-main-title" data-aos="fade-up">
+            Why
+            <span>Us?</span>
+        </div>
+
+        <div id="why-us-list" data-aos="fade-up">
+            <div id="why-us-card">
+                <div id="why-us-card-content">
+                    <div id="why-us-card-title">
+                        Never Resold
+                    </div>
+                    <div id="why-us-card-description">
+                        Unlike most of the shops out there, SwiftAlts never sells already sold accounts to our customers. We want to keep our customers as much satisfied as possible.
+                    </div>
+                </div>
+            </div>
+            <div id="why-us-card">
+                <div id="why-us-card-content">
+                    <div id="why-us-card-title">
+                        24/7 Support
+                    </div>
+                    <div id="why-us-card-description">
+                        Giving our customers the best customer service is very important to us. Our Support agents are here to help you 24/7 when you are having any issues with your order or for any other reason.
+                    </div>
+                </div>
+            </div>
+            <div id="why-us-card">
+                <div id="why-us-card-content">
+                    <div id="why-us-card-title">
+                        Unlimited Warranty
+                    </div>
+                    <div id="why-us-card-description">
+                        Most of the shops out there will give you a short amount of time to check if there are any issues with your order, but with SwiftAlts you are entitled to an unlimited warranty.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" data-aos="fade-up">
+
+        <div id="footer-in">
+            <div id="footer-left">
+
+                <div id="footer-left-in">
+                    <p>We Accept</p>
+                    <div id="payment-images">
+                        <img src="images/dark-visa.png">
+                        <img src="images/dark-mastercard.png">
+                        <img src="images/dark-american-express.png">
+                        <img src="images/dark-discover.png">
+                        <img src="images/dark-googlepay.png">
+                        <img src="images/dark-applepay.png">
+                    </div>
+                </div>
+
+            </div>
+            <div id="footer-right">
+
+                <div id="footer-right-top">
+                    <ul id="footer-links">
+                        <li><a href="terms-of-service.html" id="terms-of-service-link">Terms of Service</a></li>
+                        <li><a href="privacy-policy.html" id="privacy-policy-link">Privacy Policy</a></li>
+                        <li id="support-link">Support</li>
+                    </ul>
+                </div>
+
+                <div id="footer-right-bottom">
+                    <div id="footer-right-bottom-text"><p>© SwiftAlts, all rights reserved</p></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="notification-area">
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content" id="modal-content">
+            <div class="modal-header" id="modal-header">
+                <button data-close-button class="close-button">&times;</button>
+
+                <div class="modal-title" id="modal-title"></div>
+            </div>
+
+            <div class="modal-info" id="modal-info">
+                <span class="modal-account-card-id" id="modal-account-card-id"></span>
+                <span class="modal-account-card-stripe-image" id="modal-account-card-stripe-image"></span>
+                Price: <span class="modal-info-price" id="modal-info-price"></span> /
+                Stock: <span class="modal-info-stock" id="modal-info-stock"></span>
+            </div>
+
+            <p class="modal-description" id="modal-description">
+            </p>
+
+            <input type="email" placeholder="Enter your Email" class="email-input" id="email-input">
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+
+            <div class="quantityLabel" id="quantityLabel">
+                <div class="quantity-label-heading" id="quantity-label-heading">
+                    Quantity
+                </div>
+
+                <div class="quantity-label-description" id="quantity-label-description"></div>
+            </div>
+
+            <div class="accountsAmount" id="accountsAmount">
+                <div class="decButton" id="decButton">-</div>
+                <input type="number" step="1" class="accountsNumber" id="accountsNumber" value="" min="">
+                <div class="incButton" id="incButton">+</div>
+            </div>
+
+            <button class="buttonContinue" id="buttonContinue">Checkout → $<span class="modal-price" id="modal-price"></span></button>
+        </div>
+    </div>
+
+    <div class="modal2" id="modal2">
+        <div class="modal2-content">
+            <div class="modal2-header">
+                <button data-close-button2 class="close2-button">&times;</button>
+                <div class="modal2-title" id="modal2-title">Support</div>
+            </div>
+            <div class="modal2-main">
+                <div class="modal2-main-content">
+                    <div class="modal2-main-content-text">
+                        <div class="modal2-main-content-text-main2">
+                            <p>To contact support, please join our discord by clicking this discord button, and open a ticket in the #create-a-ticket channel in the support category, and our support agents will be shortly with you.</p>
+                            <a href="https://discord.gg/wSYTd9SUCq" target="_blank"><button class="discord-button" id="discord-button"><i class="fab fa-discord"></i></button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+</body>
+<script>
+    AOS.init();
+</script>
+</html>
