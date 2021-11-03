@@ -15,11 +15,15 @@ const nodemailer = require('nodemailer')
 const path = require('path')
 const cors = require('cors')
 const SERVER_URL = process.env.SERVER_URL
+const mongoDbLink = process.env.MONGODB_LINK
+const nodemailerHost = process.env.NODEMAILER_HOST
+const nodemailerAuthEmail = process.env.NODEMAILER_AUTH_EMAIL
+const nodemailerAuthPassword = process.env.NODEMAILER_AUTH_PASSWORD
 
 app(cors())
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://SwiftAlts:z8VDLSmEerBZthFq@cluster0.g6rw8.mongodb.net/orders', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(mongoDbLink, {useNewUrlParser: true, useUnifiedTopology: true})
 const Schema = mongoose.Schema
 
 const schema = new Schema({
@@ -478,15 +482,15 @@ app.post('/webhook', async (req, res) => {
       `
 
       const transporter = nodemailer.createTransport({
-        host: "smtp.titan.email",
+        host: `${nodemailerHost}`,
         auth: {
-          user: "admin@swiftalts.xyz",
-          pass: "0BCSQj3y2RAt4qooCF"
+          user: `${nodemailerAuthEmail}`,
+          pass: `${nodemailerAuthPassword}`
         }
       })
 
       const options = {
-        from: '"SwiftAlts" <admin@swiftalts.xyz>',
+        from: `"SwiftAlts" ${nodemailerAuthEmail}`,
         to: `${email}`,
         subject: "Purchase Complete",
         html: output
