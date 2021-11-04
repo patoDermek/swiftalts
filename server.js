@@ -20,8 +20,6 @@ const nodemailerHost = process.env.NODEMAILER_HOST
 const nodemailerAuthEmail = process.env.NODEMAILER_AUTH_EMAIL
 const nodemailerAuthPassword = process.env.NODEMAILER_AUTH_PASSWORD
 
-app(cors())
-
 const mongoose = require('mongoose')
 mongoose.connect(mongoDbLink, {useNewUrlParser: true, useUnifiedTopology: true})
 const Schema = mongoose.Schema
